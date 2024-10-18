@@ -1,7 +1,7 @@
 .rollup.cache
 .rollup.cache/**/*
 node_modules/
-package-lock.json
 yarn.lock
 .eslintcache
 .DS_Store
+dist/
