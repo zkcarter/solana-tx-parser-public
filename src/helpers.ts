@@ -37,9 +37,9 @@ export function parseTransactionAccounts<T extends Message | VersionedMessage>(
 	const requiredSignaturesAccountsCount = message.header.numRequiredSignatures;
 	const totalAccounts = accounts.length;
 	let parsedAccounts: AccountMeta[] = accounts.map((account, idx) => {
-		const isWritable =
-			idx < requiredSignaturesAccountsCount - readonlySignedAccountsCount ||
-			(idx >= requiredSignaturesAccountsCount && idx < totalAccounts - readonlyUnsignedAccountsCount);
+		const isWritable = false;
+			// idx < requiredSignaturesAccountsCount - readonlySignedAccountsCount ||
+			// (idx >= requiredSignaturesAccountsCount && idx < totalAccounts - readonlyUnsignedAccountsCount);
 
 		return {
 			isSigner: idx < requiredSignaturesAccountsCount,
